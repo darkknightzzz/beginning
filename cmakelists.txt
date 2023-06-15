@@ -1,0 +1,24 @@
+cmake_minimum_required (VERSION 3.20)
+
+set(PROGRAMME_NAME "Demo")
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+# 项目信息
+project(Demo)
+# find_package(curl)
+
+link_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/curl)
+
+add_executable(${PROGRAMME_NAME} main.cpp)
+
+target_link_libraries(${PROGRAMME_NAME} curl-x64)
+
+# set(CMAKE_VERBOSE_MAKEFILE on)
+
+# add_custom_command(TARGET ${PROGRAMME_NAME} POST_BUILD
+#     COMMAND ${CMAKE_COMMAND} -E copy_directory
+#         "${CMAKE_CURRENT_SOURCE_DIR}/libcurl-x64.dll"
+#         ${CMAKE_CURRENT_SOURCE_DIR}/build/)
+
+# 指定生成目标
