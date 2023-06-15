@@ -10,7 +10,7 @@ project(Demo)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/curl)
 
-add_executable(${PROGRAMME_NAME} main.cpp)
+add_executable(${PROGRAMME_NAME} test.cpp)
 
 target_link_libraries(${PROGRAMME_NAME} curl-x64)
 
